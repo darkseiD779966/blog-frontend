@@ -1,0 +1,53 @@
+/* src/app/auth/login/login.component.scss */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .google-btn {
+    background-color: #db4437;
+    color: white;
+  }
+  
+  .google-btn:hover {
+    background-color: #c1351d;
+  }
+  
+  .facebook-btn {
+    background-color: #3b5998;
+    color: white;
+  }
+  
+  .facebook-btn:hover {
+    background-color: #2d4373;
+  }
+  
+  .login-btn i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  

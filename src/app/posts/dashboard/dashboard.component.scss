@@ -1,0 +1,70 @@
+/* src/app/dashboard/dashboard.component.scss */
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .post-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .post-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .post-card p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .post-card small {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  /* dashboard.component.scss */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  button {
+    margin: 0 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+}
+
+  hr {
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    margin: 1.5rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .post-card {
+      padding: 1rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
