@@ -1,59 +1,161 @@
-# BlogFrontend
+# Angular Blog Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+This is the frontend application built using **Angular** that is integrated with the **NestJS Blog Backend API**. The app provides a platform for users to log in via **Google OAuth** or **Facebook OAuth**, view and manage posts, and create new posts. It also includes pagination, post details in popups, and an intuitive dashboard to manage posts.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
 
+1. **OAuth Authentication**
+   - Login using **Google OAuth** or **Facebook OAuth**.
+   - After successful login, users are redirected to the **Dashboard**.
+
+2. **Dashboard**
+   - Displays all public posts with **pagination**.
+   - Each post is clickable, and a **popup** shows the post details.
+   - Includes a top bar with:
+     - **Create Post** button.
+     - **My Posts** section, where users can manage their posts.
+
+3. **My Posts**
+   - Users can **edit** or **delete** posts they have created.
+   
+4. **Create Post**
+   - A form to create a new post, including title, content, and visibility.
+   - Integrated with the backend to save posts.
+
+5. **API Integration**
+   - Integrated with the **NestJS Blog API** for managing posts (CRUD operations).
+   - All posts and user authentication are handled through API calls.
+
+6. **End-to-End Testing**
+   - **Cypress** is used for E2E testing.
+   - The test for creating a post is located in `cypress/e2e/create-post.component.cy.ts`.
+
+---
+
+## 🛠️ Setup & Installation
+
+### 1. Install Dependencies
+In the root of the Angular project, run the following command to install dependencies:
 ```bash
+
+npm install
+4. Run the Angular Application
+Once the backend is up and running, navigate to the Angular project directory and run:
+
+bash
+Copy
+Edit
+# Navigate to the Angular project directory
+cd path/to/angular-frontend
+
+# Serve the Angular application
 ng serve
-```
+This will start the Angular frontend on http://localhost:4200. The app will be available to use in the browser.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🔑 Authentication
+Upon loading the application, users are prompted with a login screen.
 
-## Code scaffolding
+Users can choose to log in via either Google OAuth or Facebook OAuth.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Once authenticated, they are redirected to the Dashboard, where they can see public posts and manage their own posts.
 
-```bash
-ng generate component component-name
-```
+📋 Dashboard Features
+Pagination: Displays posts in a paginated format. Users can navigate through the posts using the pagination controls.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Post Details: Clicking on a post shows its detailed content in a popup.
 
-```bash
-ng generate --help
-```
+Create Post: Users can create new posts via a form. The form takes in the post title, content, and visibility.
 
-## Building
+My Posts: The My Posts section displays posts created by the user. Each post has options to edit or delete.
 
-To build the project run:
+🛠️ Project Structure
+The Angular project is well-structured into modules for maintainability:
 
-```bash
-ng build
-```
+Modules:
+Auth Module: Handles user authentication with Google and Facebook OAuth.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Posts Module: Manages post-related features like viewing, creating, and editing posts.
 
-## Running unit tests
+Layout Module: Contains the layout for the app, including the dashboard and UI components like the top bar and post cards.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Environment Configuration:
+The src/environments folder contains the environment files with API URLs and OAuth credentials.
 
-```bash
-ng test
-```
+🧪 End-to-End Testing with Cypress
+Cypress is used for E2E testing, and the test for creating posts is located in the following file:
 
-## Running end-to-end tests
+bash
+Copy
+Edit
+cypress/e2e/create-post.component.cy.ts
+To Run the Cypress Tests:
+Install Cypress dependencies:
 
-For end-to-end (e2e) testing, run:
+bash
+Copy
+Edit
+npm install cypress --save-dev
+Open Cypress test runner:
 
-```bash
-ng e2e
-```
+🏗️ Build the Angular Project
+To build the project for production, run the following command:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+bash
+Copy
+Edit
+ng build --prod
+This will build the Angular app with optimizations for production.
 
-## Additional Resources
+🔧 Technologies Used
+Frontend: Angular 12+, TypeScript
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Backend: NestJS (for API integration)
+
+Authentication: Google OAuth, Facebook OAuth
+
+Testing: Cypress for E2E tests
+
+Pagination: Integrated with backend API to paginate public posts
+
+🛠️ Developer Notes
+Ensure that the backend is running before starting the frontend.
+
+OAuth credentials need to be added to the environment.ts file to enable login functionality.
+
+The API URL (http://localhost:3000/api) should point to the running backend server.
+
+🧪 Create Post Integration Test (Cypress)
+We use Cypress to run an end-to-end integration test for the Create Post feature. This ensures that the entire flow — from filling the form to successfully submitting a post — works as expected in a live environment.
+
+Test file:
+
+bash
+Copy
+Edit
+cypress/e2e/create-post.component.cy.ts
+✅ This test simulates a user creating a post through the UI and validates that it's properly submitted and visible in the dashboard.
+
+🚀 How to Run the Integration Test
+Make sure both the frontend and backend servers are running:
+
+Frontend → ng serve
+
+Backend → npm run start
+
+Then run this command to execute the test:
+
+bash
+Copy
+Edit
+npx cypress run --e2e --spec "cypress/e2e/create-post.component.cy.ts"
+This command:
+
+Runs Cypress in headless mode (no UI).
+
+Targets the specific test file for the Create Post feature.
+
+Prints results directly in the terminal.
+
+![Cypress test screenshot](./assets/cypress.png)

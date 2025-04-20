@@ -1,7 +1,7 @@
 describe('CreatePostComponent', () => {
     beforeEach(() => {
       // Simulate an authenticated user session
-      localStorage.setItem('jwt', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODAxNDYxMzNiOTJjNDhkODU0MzgyZWUiLCJlbWFpbCI6InNvZmFmYXNhMEBnbWFpbC5jb20iLCJpYXQiOjE3NDUwMzc3MzIsImV4cCI6MTc0NTEyNDEzMn0.9CO-2CCKUdEqm7IiY9fZOZ0SjSXh09YcmwKDJKZBE8Y'); // Set the test token
+      localStorage.setItem('jwt', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODAxNDYxMzNiOTJjNDhkODU0MzgyZWUiLCJlbWFpbCI6InNvZmFmYXNhMEBnbWFpbC5jb20iLCJpYXQiOjE3NDUxNjIyODAsImV4cCI6MTc0NTI0ODY4MH0.jqceqF3l3Fak96ek-B8c8W7423hW5CE6lEXCA5-rbZA'); // Set the test token
       cy.visit('/posts/create');
     });
   
