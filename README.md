@@ -158,4 +158,6 @@ Targets the specific test file for the Create Post feature.
 
 Prints results directly in the terminal.
 
+```
+
 ![Cypress test screenshot](./assets/cypress.png)
