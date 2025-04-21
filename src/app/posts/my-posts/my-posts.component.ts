@@ -56,7 +56,7 @@ export class MyPostsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.message.success('Post updated successfully!');
+        this.message.success('update Post successfully!');
         this.ngOnInit(); // Reload posts
       }
     });
