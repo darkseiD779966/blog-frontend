@@ -67,7 +67,7 @@ export class MyPostsComponent implements OnInit {
     this.postsApi.deletePost(id).subscribe({
       next: () => {
         this.posts = this.posts.filter(p => p._id !== id);
-        this.message.success('Post deleted successfully');
+        this.message.success('Post deleted successfully!');
       },
       error: (err) => this.message.error('Error deleting post'),
     });
