@@ -79,7 +79,7 @@ export class CreatePostComponent {
         this.router.navigate(['/posts/me']);
       },
       error: (err) => {
-        console.error('Failed to create post:', err);
+        console.error('Failed to create posts:', err);
         alert('Error creating post.');
       }
     });
