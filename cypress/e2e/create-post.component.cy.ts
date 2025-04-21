@@ -44,7 +44,7 @@ describe('CreatePostComponent', () => {
   
       cy.wait('@createPostError');
       cy.on('window:alert', (alertText) => {
-        expect(alertText).to.contains('Error creating post.');
+        expect(alertText).to.contains('Error creating posts.');
       });
     });
   });
