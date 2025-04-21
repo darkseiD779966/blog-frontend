@@ -79,7 +79,7 @@ export class EditPostDialogComponent {
     this.postsApi.updatePost(_id, postData).subscribe({
       next: () => this.dialogRef.close(true),
       error: (err) => {
-        console.error('Failed to update post', err);
+        console.error('Failed to update posts', err);
         this.dialogRef.close(false);
       },
     });
