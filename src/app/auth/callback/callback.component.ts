@@ -11,7 +11,7 @@ export class CallbackComponent implements OnInit {
   ngOnInit() {
     const token = this.route.snapshot.queryParamMap.get('token');
     if (token) {
-      console.log(token,"jwt");
+      console.log(token,"jwt token");
       
       localStorage.setItem('jwt', token);
       this.router.navigate(['/posts']);        // or '/posts/me'
