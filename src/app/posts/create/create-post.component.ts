@@ -80,7 +80,7 @@ export class CreatePostComponent {
       },
       error: (err) => {
         console.error('Failed to create posts:', err);
-        alert('Error creating post.');
+        alert('Error creating posts.');
       }
     });
   }
